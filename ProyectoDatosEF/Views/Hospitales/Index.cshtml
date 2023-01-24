@@ -53,6 +53,11 @@
                     asp-action="Details"
                     asp-route-id="@item.IdHospital">
                     Details
+                </a> | 
+                <a asp-controller="Doctores"
+                    asp-action="DoctoresHospital"
+                    asp-route-idhospital="@item.IdHospital">
+                    Doctores
                 </a>
             </td>
         </tr>
