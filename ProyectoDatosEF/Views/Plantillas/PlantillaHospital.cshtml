@@ -1,0 +1,66 @@
+﻿@model IEnumerable<ProyectoDatosEF.Models.Plantilla>
+
+@{
+    ViewData["Title"] = "PlantillaHospital";
+}
+
+<h1>Plantilla Hospital</h1>
+
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.IdPlantilla)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Apellido)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Funcion)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Turno)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Salario)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.IdSala)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.IdHospital)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.IdPlantilla)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Apellido)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Funcion)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Turno)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Salario)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.IdSala)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.IdHospital)
+            </td>
+            <td>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

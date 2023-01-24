@@ -14,5 +14,6 @@ namespace ProyectoDatosEF.Data
         //NOSOTROS HAREMOS LAS CONSULTAS A DICHO DbSet
         public DbSet<Hospital> Hospitales { get; set; }
         public DbSet<Doctor> Doctores { get; set; }
+        public DbSet<Plantilla> Plantillas { get; set; }
     }
 }

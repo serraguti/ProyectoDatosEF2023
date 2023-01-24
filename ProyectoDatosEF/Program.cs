@@ -11,6 +11,7 @@ string connectionString = builder.Configuration.GetConnectionString("sqlhospital
 //RESOLVEMOS LA DEPENDENCIA DEL REPOSITORY
 builder.Services.AddTransient<RepositoryHospital>();
 builder.Services.AddTransient<RepositoryDoctores>();
+builder.Services.AddTransient<RepositoryPlantilla>();
 //LAS CLASES CONTEXT DE ACCESO A DATOS UTILIZAN
 //UN METODO ESPECIAL LLAMADO AddContext
 builder.Services.AddDbContext<HospitalContext>
