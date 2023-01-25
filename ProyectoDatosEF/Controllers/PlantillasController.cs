@@ -34,6 +34,8 @@ namespace ProyectoDatosEF.Controllers
         public IActionResult BuscarPlantillaFuncion()
         {
             List<Plantilla> plantillas = this.repo.GetPlantilla();
+            List<string> funciones = this.repo.GetFunciones();
+            ViewData["FUNCIONES"] = funciones;
             return View(plantillas);
         }
 
@@ -41,6 +43,8 @@ namespace ProyectoDatosEF.Controllers
         public IActionResult BuscarPlantillaFuncion(string funcion)
         {
             List<Plantilla> plantillas = this.repo.GetPlantillaFuncion(funcion);
+            List<string> funciones = this.repo.GetFunciones();
+            ViewData["FUNCIONES"] = funciones;
             return View(plantillas);
         }
     }
