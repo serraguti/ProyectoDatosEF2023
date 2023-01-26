@@ -1,0 +1,63 @@
+﻿@model IEnumerable<ProyectoDatosEF.Models.Empleado>
+
+@{
+    List<string> oficios = ViewData["OFICIOS"] as List<string>;
+}
+
+@{
+    ViewData["Title"] = "IncrementoSalarial";
+}
+
+<h1>Incremento Salarial empleados</h1>
+
+<form method="post">
+    <label>Seleccione un oficio</label>
+    <select name="oficio" class="form-control">
+        @foreach (string ofi in oficios)
+        {
+            <option value="@ofi">@ofi</option>
+        }
+    </select>
+    <label>Introduzca un incremento salarial: </label>
+    <input type="number" name="incremento" class="form-control" required/>
+    <button class="btn btn-outline-info">
+        Incrementar salarios
+    </button>
+</form>
+
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Apellido)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Oficio)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Salario)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.FechaAlta)
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Apellido)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Oficio)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Salario)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.FechaAlta)
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

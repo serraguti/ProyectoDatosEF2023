@@ -15,5 +15,6 @@ namespace ProyectoDatosEF.Data
         public DbSet<Hospital> Hospitales { get; set; }
         public DbSet<Doctor> Doctores { get; set; }
         public DbSet<Plantilla> Plantillas { get; set; }
+        public DbSet<Empleado> Empleados { get; set; }
     }
 }
